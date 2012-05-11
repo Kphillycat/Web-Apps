@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CS253 HW3</title>
+	</head>
+	<body>
+		<h1>CS253 Blog</h1>
+		<br />
+		{% for b in blogs %}
+		<div class="blog_title">{{b.title}}</div>
+		<div class="blog_content">{{b.content}}</div>
+		<hr>
+		{%endfor%}
+	</body>
+</html>
+			
