@@ -1,0 +1,27 @@
+<html>
+<form method="post">
+    <table>
+    <tr>
+        <td>Username</td>
+        <td><input type="text" name="username" value="{{us}}"></td>
+        <td><div style= color:red>{{us_error}}</div></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" name="password" value="{{password}}"></td>
+        <td><div style= color:red>{{pw_error}}</div></td>
+    </tr>
+    <tr>
+        <td>Verify Password</td>
+        <td><input type="password" name="verify" value="{{pass2}}"></td>
+        <td><div style= color:red>{{pw_match_error}}</div></td>
+    </tr>
+    <tr>
+        <td>Email (optional)</td>
+        <td><input type="text" name="email" value="{{em}}"></td>
+        <td><div style= color:red>{{em_error}}</div></td>
+    </tr>
+    </table>
+    <input type="submit">
+</form>
+</html>

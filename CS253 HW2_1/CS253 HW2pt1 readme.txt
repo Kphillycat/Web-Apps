@@ -1,0 +1,2 @@
+In CS253 homework #2 part 1, I had to make a web app which transformed whatever the user typed into the form 
+into the "rot13" version of it when the submit button was pressed. Python & HTML is stored in main.py.

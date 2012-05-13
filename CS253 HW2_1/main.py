@@ -31,6 +31,7 @@ form="""
 
 class MainHandler(webapp2.RequestHandler):	
 	def write_form(self,q=""):
+		#creates a rot13 of whatever the user types in
 		self.response.out.write(form % {"q": escape_html(q.encode('rot13'))})
 	
 	def get(self):

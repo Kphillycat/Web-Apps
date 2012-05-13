@@ -73,14 +73,17 @@ class MainHandler(webapp2.RequestHandler):
         pass_error=""
         email_error=""
         match_error=""
-
+		
+		#default email validity to True since it's optional
         em_valid = True
-
+		
+		#grab data from form
         name = self.request.get('username')
         password = self.request.get('password')
         password_2 = self.request.get('verify')
         email = self.request.get('email')
         
+		#valid the username and password using regular expressions
         us_valid = valid_us(name)
         pw_valid = valid_pw(password)
 
@@ -94,6 +97,7 @@ class MainHandler(webapp2.RequestHandler):
             em_valid = valid_email(email)
 
         if(us_valid and pw_valid and em_valid and match_valid):
+			#Successful registration results in a welcome page for the user. Name is added to the URL
             self.redirect("/welcome?username=%s" %(name))
 
             
